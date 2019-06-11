@@ -34,7 +34,7 @@ public class problemNine {
     /**
      * checks whether an int is prime or not.
      * @param n
-     * @return
+     * @return true
      */
     private boolean isPrime(int n) {
         //check if n is a multiple of 2
