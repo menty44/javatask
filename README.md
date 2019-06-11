@@ -50,3 +50,14 @@ By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that 
 
 What is the 10 001st prime number?
 
+## Branch problemEight
+It can be seen that the number, 125874, and its double, 251748, contain exactly the same digits, but in a different order.
+
+Find the smallest positive integer, x, such that 2x, 3x, 4x, 5x, and 6x, contain the same digits.
+
+## Branch problemNine
+The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+
+Find the sum of all the primes below two million.
+
+

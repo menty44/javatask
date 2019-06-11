@@ -1,5 +1,7 @@
 package com.blaqueyard.tasks;
 
+import java.util.Arrays;
+
 public class problemEight {
     //main function calling the solution methods
     public static void main(String[] args) {
@@ -14,27 +16,40 @@ public class problemEight {
         System.out.println(b);
     }
 
+    /**
+     * @return Solution
+     */
     private int Solution(){
-        for (int i = 2, count = 0; ; i++) {
-            //check if prime is true
-            if (isPrime(i)) {
-                count++;
-                if (count == 10001)
-                    return i;
-            }
+        for (int i = 1; ; i++) {
+            if (i > Integer.MAX_VALUE / 6)
+                throw new ArithmeticException("Max Value");
+            if (multiplesHaveSameDigits(i))
+                return i;
         }
     }
 
-    //checks whether an int is prime or not.
-    private boolean isPrime(int n) {
-        //check if n is a multiple of 2
-        if (n%2==0) return false;
-        //if not, then just check the odds
-        for(int i=3;i*i<=n;i+=2) {
-            if(n%i==0)
+    /**
+     * boolean method for checking if values are equal
+     * @param x
+     * @return
+     */
+    private static boolean multiplesHaveSameDigits(int x) {
+        for (int i = 2; i <= 6; i++) {
+            if (!Arrays.equals(Sort(x), Sort(i * x)))
                 return false;
         }
         return true;
+    }
+
+    /**
+     * method for sorting
+     * @param x
+     * @return
+     */
+    private static char[] Sort(int x) {
+        char[] rs = Integer.toString(x).toCharArray();
+        Arrays.sort(rs);
+        return rs;
     }
 
 }
